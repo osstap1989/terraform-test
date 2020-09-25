@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-central-1"" // Region where to Create Resources
+  region = "eu-central-1" // Region where to Create Resources
 }
 
 terraform {
