@@ -1,11 +1,11 @@
 provider "aws" {
-  region = "us-west-2" // Region where to Create Resources
+  region = "eu-central-1"" // Region where to Create Resources
 }
 
 terraform {
   backend "s3" {
-    bucket = "adv-it-terraform-state"        // Bucket where to SAVE Terraform State
+    bucket = "test-terraform-state-frankfurt"        // Bucket where to SAVE Terraform State
     key    = "new-staging/terraform.tfstate" // Object name in the bucket to SAVE Terraform State
-    region = "us-west-2"                     // Region where bucket is created
+    region = "eu-central-1"                     // Region where bucket is created
   }
 }
