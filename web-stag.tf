@@ -1,6 +1,6 @@
 resource "aws_instance" "web-stag" {
   ami                    = data.aws_ami.latest_amazon_linux.id
-  instance_type          = "t3.micro"
+  instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.web-stag.id]
   user_data              = <<EOF
 #!/bin/bash
@@ -14,7 +14,6 @@ EOF
 
   tags = {
     Name  = "STAG WebServer"
-    Owner = "Denis Astahov"
   }
 }
 
@@ -38,6 +37,5 @@ resource "aws_security_group" "web-stag" {
 
   tags = {
     Name  = "Web Server SecurityGroup"
-    Owner = "Denis Astahov"
   }
 }
